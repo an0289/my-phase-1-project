@@ -26,9 +26,8 @@ function getDrinksByName(drinkName) {
 
     //Function to place the grabbed data into the card 
     function renderRecipeCard(drinkInfo) {
-    //const image = document.createElement('img')
-    //image.setAttribute('class', 'drink_image')
     const title = document.querySelector(".title")
+    const image = document.querySelector(".thumb_nail")
     const ingredient1 = document.querySelector('.amount_ingredient1')
     const ingredient2 = document.querySelector('.amount_ingredient2')
     const ingredient3 = document.querySelector('.amount_ingredient3')
@@ -38,10 +37,8 @@ function getDrinksByName(drinkName) {
     const ingredient7 = document.querySelector('.amount_ingredient7')
     const ingredient8 = document.querySelector('.amount_ingredient8')
     const instructions = document.querySelector('#instructions')
-    //document.querySelector('.header').appendChild(image)
-    //image.src = drinkInfo.strDrinkThumb
-    document.querySelector('.thumbNail').src = drinkInfo.srtDrinkThumb
     title.innerText = drinkInfo.strDrink
+    image.src = drinkInfo.strDrinkThumb
     ingredient1.innerText = `${drinkInfo.strMeasure1}: ${drinkInfo.strIngredient1}`
     ingredient2.innerText = `${drinkInfo.strMeasure2}: ${drinkInfo.strIngredient2}`
     ingredient3.innerText = `${drinkInfo.strMeasure3}: ${drinkInfo.strIngredient3}`
@@ -52,4 +49,4 @@ function getDrinksByName(drinkName) {
     ingredient8.innerText = `${drinkInfo.strMeasure8}: ${drinkInfo.strIngredient8}`
     instructions.innerText = drinkInfo.strInstructions
 }
-getDrinksByName('mint julep')
+getDrinksByName('mojito')
