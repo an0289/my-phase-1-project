@@ -9,6 +9,19 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    /* padding: 2rem;
+    display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit,
+    minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense; */
+} 
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #container {
@@ -19,7 +32,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
 #container.closed header { cursor: pointer; }
@@ -29,9 +42,13 @@ header { cursor: pointer; }
     width: 100%;
     height: 250px;
     background: center / cover;
-    background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg)
 }
 
+.thumb_nail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .title {
     position: relative;
     z-index: 1;
