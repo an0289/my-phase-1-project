@@ -1,7 +1,7 @@
 function grabById(id) {
     return document.getElementById(id)
 }
-
+//Event Listener to display ingredients/instructions
 document.getElementById("toggle").addEventListener("click", function() {
     if (grabById("container").classList.contains("closed")) {
      grabById("container").classList.remove("closed")
@@ -18,10 +18,17 @@ function getDrinksByName(drinkName) {
         data.drinks.forEach(drinkName => {
             renderRecipeCard(drinkName)
         })
-        console.log(data)
+        console.log(data.drinks)
         })
     }
-
+//Event Listener Submit 
+const submitForm = document.getElementById('drink_form')
+const search = document.getElementById('search')
+submitForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    getDrinksByName(search.value)
+    submitForm.reset()
+})
 
 
     //Function to place the grabbed data into the card 
