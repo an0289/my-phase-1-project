@@ -21,9 +21,12 @@ body {
 
 #recipe-card-collection {
    margin: 2rem; 
-   align-items: center;
+   align-items: flex-start;
    display: flex;
    flex-direction: column;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(360px, 1fr));
+   gap: 1rem
 }
 
 
