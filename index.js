@@ -1,9 +1,6 @@
-// function grabById(id) {
-//     return document.getElementById(id)
-// }
-
- 
-//Fetch function to find drinks by their name
+const collection = document.getElementById('recipe-card-collection')
+let drinksArray = []
+// Fetch function to find drinks by their name
 function getDrinksByName(drinkName) {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`)
     .then(resp => resp.json())
@@ -12,24 +9,68 @@ function getDrinksByName(drinkName) {
         drinksArray.forEach(drinkName => {
             renderRecipeCard(drinkName)
         })
+        // updateRecipePage()
         console.log(drinksArray)
         })
 }
 
+//Fetch function to find drinks by their first letter
+function getDrinksByFirstLetter(firstLetter) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${firstLetter}`)
+    .then(resp => resp.json())
+    .then(data => {
+        data.drinks.forEach(firstLetter => renderRecipeCard(firstLetter))
+    })
+}
+
+//Fetch function to find drinks by alcohol 
+function getDrinksByAlcohol(alcohol) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${alcohol}`)
+    .then(resp => resp.json())
+    .then(data => {
+        data.drinks.forEach(alcohol => renderRecipeName(alcohol))
+    })
+}
 //Event Listener Submit 
 const submitForm = document.getElementById('drink_form')
 const search = document.getElementById('search')
 submitForm.addEventListener('submit', (e) => {
     e.preventDefault()
     getDrinksByName(search.value)
+    getDrinksByFirstLetter(search.value)
+    getDrinksByAlcohol(search.value)
     submitForm.reset()
 })
 
-// submitFrom.addEventListener('change', (e) => {
-//     if (e.search.value === drinkName) {
-//         return 
+
+
+
+// //Trying to create a change event listener to clear the webpage each subsequent search
+// function removeChildren(parent) {
+//     while (parent.firstChild) {
+//         parent.removeChild(parent.firstChild)
 //     }
-//    }) 
+// }
+
+// function updateDrinkList(drinks) {
+//     removeChildren(collection)
+//     drinks.forEach((drinkName) => renderRecipeCard(drinkName))
+// }
+
+// function updateRecipePage() {
+//     let drinkName = ''
+//     submitForm.addEventListener('change', () => {
+//         if(search.value === drinkName) {
+//             return drinksArray.forEach((drinkName) => renderRecipeCard(drinkName))
+//         } else {
+//             updateDrinkList(drinksArray.filter(drinkName => {
+//                 return drinkName.match(search.value)
+//             }))
+//         }
+//     }) 
+// }
+
+
 
 
 //Function to dynamical render the card 
@@ -38,7 +79,6 @@ function renderRecipeCard(drinkInfo) {
     const container = document.createElement('div')
     container.setAttribute('id', 'container')
     container.setAttribute('class', 'closed')
-    const collection = document.getElementById('recipe-card-collection')
     collection.appendChild(container)
 
     const toggle = document.createElement('header')
@@ -265,3 +305,28 @@ function renderRecipeCard(drinkInfo) {
       
 }
 
+function renderRecipeName(drinkInfo) {
+   
+    const container = document.createElement('div')
+    container.setAttribute('id', 'container')
+    container.setAttribute('class', 'closed')
+    collection.appendChild(container)
+
+    const toggle = document.createElement('header')
+    toggle.setAttribute('id', 'toggle')
+    container.appendChild(toggle)
+
+    const divHeader = document.createElement('div')
+    divHeader.setAttribute('class', 'header')
+    toggle.appendChild(divHeader)
+
+    const image = document.createElement('img')
+    image.setAttribute('class', 'thumb_nail')
+    divHeader.appendChild(image)
+    image.src = drinkInfo.strDrinkThumb
+
+    const title = document.createElement('div')
+    title.setAttribute('class', 'title')
+    toggle.appendChild(title)
+    title.innerText = drinkInfo.strDrink
+}
