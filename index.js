@@ -1,14 +1,7 @@
 function grabById(id) {
     return document.getElementById(id)
 }
-//Event Listener to display ingredients/instructions
-document.getElementById("toggle").addEventListener("click", function() {
-    if (grabById("container").classList.contains("closed")) {
-     grabById("container").classList.remove("closed")
-    } else {
-     grabById("container").classList.add("closed")
-    }
- } )
+
 
 //Fetch function to find drinks by their name
 function getDrinksByName(drinkName) {
@@ -32,21 +25,33 @@ submitForm.addEventListener('submit', (e) => {
 
 //Function to dynamical render the card 
 function renderRecipeCard(drinkInfo) {
-    
+    const toggle = document.createElement('header')
+    toggle.setAttribute('id', 'toggle')
+    const container = document.getElementById('container')
+    container.appendChild(toggle)
+
+    const divHeader = document.createElement('div')
+    divHeader.setAttribute('class', 'header')
+    toggle.appendChild(divHeader)
+
     const title = document.createElement('div')
     title.setAttribute('class', 'title')
-    const header = document.getElementById('toggle')
-    header.appendChild(title)
+    toggle.appendChild(title)
     title.innerText = drinkInfo.strDrink
 
     const image = document.createElement('img')
     image.setAttribute('class', 'thumb_nail')
-    const divHeader = document.querySelector('.header')
     divHeader.appendChild(image)
     image.src = drinkInfo.strDrinkThumb
 
+    const article = document.createElement('article')
+    container.appendChild(article)
+
+    const ingredients = document.createElement('ul')
+    ingredients.setAttribute('class', 'ingredients')
+    article.appendChild(ingredients)
+
     const li1 = document.createElement('li')
-    const ingredients = document.querySelector('.ingredients')
     ingredients.appendChild(li1)
     const ingred1 = document.createElement('div')
     ingred1.setAttribute('class', 'amount_ingredient1')
@@ -151,11 +156,22 @@ function renderRecipeCard(drinkInfo) {
     li15.appendChild(ingred15)
     ingred15.innerText = `${drinkInfo.strMeasure15}: ${drinkInfo.strIngredient15}`
 
+    const preparation = document.createElement('div')
+    preparation.setAttribute('class', 'preparation')
+    article.appendChild(preparation)
+    
     const instructions = document.createElement('div')
     instructions.setAttribute('id', 'instructions')
-    const preparation = document.querySelector('.preparation')
     preparation.appendChild(instructions)
 
+    //Event Listener to display ingredients/instructions
+    document.getElementById("toggle").addEventListener("click", function() {
+    if (grabById("container").classList.contains("closed")) {
+     grabById("container").classList.remove("closed")
+    } else {
+     grabById("container").classList.add("closed")
+    }
+ } )
     
 }
 
@@ -184,4 +200,4 @@ function renderRecipeCard(drinkInfo) {
 //     ingredient8.innerText = `${drinkInfo.strMeasure8}: ${drinkInfo.strIngredient8}`
 //     instructions.innerText = drinkInfo.strInstructions
 // }
-//getDrinksByName('mojito')
+getDrinksByName('mojito')
