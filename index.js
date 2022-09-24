@@ -13,8 +13,17 @@ function getDrinksByName(drinkName) {
         })
         console.log(data.drinks)
         })
-        
-    }
+
+    // Event Listener to display ingredients/instructions
+//    document.getElementById("toggle").addEventListener("click", function() {
+//     if (grabById("container").classList.contains("closed")) {
+//      grabById("container").classList.remove("closed")
+//     } else {
+//      grabById("container").classList.add("closed")
+//     }
+// })
+}
+
 //Event Listener Submit 
 const submitForm = document.getElementById('drink_form')
 const search = document.getElementById('search')
@@ -172,15 +181,14 @@ function renderRecipeCard(drinkInfo) {
     preparation.appendChild(instructions)
     instructions.innerText = drinkInfo.strInstructions
 
-    //Event Listener to display ingredients/instructions
-    document.getElementById("toggle").addEventListener("click", function() {
-        if (grabById("container").classList.contains("closed")) {
-         grabById("container").classList.remove("closed")
-        } else {
-         grabById("container").classList.add("closed")
-        }
-     } )
-        
+    toggle.addEventListener("click", function() {
+    if (container.classList.contains("closed")) {
+     container.classList.remove("closed")
+    } else {
+     container.classList.add("closed")
+    }
+})
+      
 }
 
     //Function to place the grabbed data into the card 
