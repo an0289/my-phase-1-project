@@ -1,7 +1,19 @@
 function grabById(id) {
     return document.getElementById(id)
 }
+const toggle = document.createElement('header')
+toggle.setAttribute('id', 'toggle')
+const container = document.getElementById('container')
+container.appendChild(toggle)
 
+ //Event Listener to display ingredients/instructions
+    document.getElementById("toggle").addEventListener("click", function() {
+    if (grabById("container").classList.contains("closed")) {
+     grabById("container").classList.remove("closed")
+    } else {
+     grabById("container").classList.add("closed")
+    }
+ } )
 
 //Fetch function to find drinks by their name
 function getDrinksByName(drinkName) {
@@ -13,6 +25,7 @@ function getDrinksByName(drinkName) {
         })
         console.log(data.drinks)
         })
+        
     }
 //Event Listener Submit 
 const submitForm = document.getElementById('drink_form')
@@ -25,10 +38,10 @@ submitForm.addEventListener('submit', (e) => {
 
 //Function to dynamical render the card 
 function renderRecipeCard(drinkInfo) {
-    const toggle = document.createElement('header')
-    toggle.setAttribute('id', 'toggle')
-    const container = document.getElementById('container')
-    container.appendChild(toggle)
+    //const toggle = document.createElement('header')
+    // toggle.setAttribute('id', 'toggle')
+    //const container = document.getElementById('container')
+    // container.appendChild(toggle)
 
     const divHeader = document.createElement('div')
     divHeader.setAttribute('class', 'header')
@@ -164,14 +177,7 @@ function renderRecipeCard(drinkInfo) {
     instructions.setAttribute('id', 'instructions')
     preparation.appendChild(instructions)
 
-    //Event Listener to display ingredients/instructions
-    document.getElementById("toggle").addEventListener("click", function() {
-    if (grabById("container").classList.contains("closed")) {
-     grabById("container").classList.remove("closed")
-    } else {
-     grabById("container").classList.add("closed")
-    }
- } )
+   
     
 }
 
@@ -200,4 +206,4 @@ function renderRecipeCard(drinkInfo) {
 //     ingredient8.innerText = `${drinkInfo.strMeasure8}: ${drinkInfo.strIngredient8}`
 //     instructions.innerText = drinkInfo.strInstructions
 // }
-getDrinksByName('mojito')
+//getDrinksByName('mojito')
