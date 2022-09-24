@@ -1,15 +1,6 @@
 function grabById(id) {
     return document.getElementById(id)
 }
-//const container = document.createElement('div')
-//container.setAttribute('class', 'closed')
-//container.setAttribute('id', 'container')
-//const body = document.querySelector('body')
-//body.appendChild(container)
-const container = document.querySelector('#container')
-const toggle = document.createElement('header')
-toggle.setAttribute('id', 'toggle')
-container.appendChild(toggle)
 
  //Event Listener to display ingredients/instructions
     document.getElementById("toggle").addEventListener("click", function() {
@@ -47,6 +38,12 @@ function renderRecipeCard(drinkInfo) {
     // toggle.setAttribute('id', 'toggle')
     //const container = document.getElementById('container')
     // container.appendChild(toggle)
+
+    const container = document.createElement('div')
+    container.setAttribute('id', 'container')
+    container.setAttribute('class', 'closed')
+    const collection = document.getElementById('recipe-card-collection')
+    collection.appendChild('container')
 
     const divHeader = document.createElement('div')
     divHeader.setAttribute('class', 'header')
