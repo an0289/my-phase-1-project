@@ -33,15 +33,34 @@ function getDrinksByAlcohol(alcohol) {
 }
 //Event Listener Submit 
 const submitForm = document.getElementById('drink_form')
-const search = document.getElementById('search')
+const search1 = document.getElementById('search1')
 submitForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    getDrinksByName(search.value)
-    getDrinksByFirstLetter(search.value)
-    getDrinksByAlcohol(search.value)
+    getDrinksByName(search1.value)
+    // getDrinksByFirstLetter(search.value)
+    //getDrinksByAlcohol(search.value)
     submitForm.reset()
 })
 
+const submitLetter = document.getElementById('letter_form')
+const search2 = document.getElementById('search2')
+submitLetter.addEventListener('submit', (e) => {
+    e.preventDefault()
+    //getDrinksByName(search2.value)
+    getDrinksByFirstLetter(search2.value)
+    //getDrinksByAlcohol(search3.value)
+    submitForm.reset()
+})
+
+const submitAlcohol = document.getElementById('alcohol_form')
+const search3 = document.getElementById('search3')
+submitAlcohol.addEventListener('submit', (e) => {
+    e.preventDefault()
+    //getDrinksByName(search1.value)
+    // getDrinksByFirstLetter(search2.value)
+    getDrinksByAlcohol(search3.value)
+    submitForm.reset()
+})
 
 
 
