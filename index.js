@@ -108,6 +108,9 @@ function renderRecipeCard(drinkInfo) {
     ingred1.innerText = `${drinkInfo.strIngredient1}: ${drinkInfo.strMeasure1}`
     if (drinkInfo.strIngredient1 === null) {
         li1.remove()
+    } else if (drinkInfo.strMeasure1 === null) {
+        ingred1.innerText = `${drinkInfo.strIngredient1}`
+        li1.appendChild(ingred1)
     } else {
         li1.appendChild(ingred1)
     }
@@ -120,10 +123,13 @@ function renderRecipeCard(drinkInfo) {
     ingred2.innerText = `${drinkInfo.strIngredient2}: ${drinkInfo.strMeasure2}`
     if (drinkInfo.strIngredient2 === null) {
         li2.remove()
+    } else if (drinkInfo.strMeasure2 === null) {
+        ingred2.innerText = `${drinkInfo.strIngredient2}`
+        li2.appendChild(ingred2)
     } else {
         li2.appendChild(ingred2)
     }
-
+    
     const li3 = document.createElement('li')
     ingredients.appendChild(li3)
     const ingred3 = document.createElement('div')
@@ -132,10 +138,13 @@ function renderRecipeCard(drinkInfo) {
     ingred3.innerText = `${drinkInfo.strIngredient3}: ${drinkInfo.strMeasure3}`
     if (drinkInfo.strIngredient3 === null) {
         li3.remove()
+    } else if (drinkInfo.strMeasure3 === null) {
+        ingred3.innerText = `${drinkInfo.strIngredient3}`
+        li3.appendChild(ingred3)
     } else {
         li3.appendChild(ingred3)
     }
-    
+
     const li4 = document.createElement('li')
     ingredients.appendChild(li4)
     const ingred4 = document.createElement('div')
@@ -159,6 +168,9 @@ function renderRecipeCard(drinkInfo) {
     ingred5.innerText = `${drinkInfo.strIngredient5}: ${drinkInfo.strMeasure5}`
     if (drinkInfo.strIngredient5 === null) {
         li5.remove()
+    } else if (drinkInfo.strMeasure5 === null) {
+        ingred5.innerText = `${drinkInfo.strIngredient5}`
+        li5.appendChild(ingred5)
     } else {
         li5.appendChild(ingred5)
     }
@@ -171,6 +183,9 @@ function renderRecipeCard(drinkInfo) {
     ingred6.innerText = `${drinkInfo.strIngredient6}: ${drinkInfo.strMeasure6}`
     if (drinkInfo.strIngredient6 === null) {
         li6.remove()
+    } else if (drinkInfo.strMeasure6 === null) {
+        ingred6.innerText = `${drinkInfo.strIngredient6}`
+        li6.appendChild(ingred6)
     } else {
         li6.appendChild(ingred6)
     }
@@ -183,6 +198,9 @@ function renderRecipeCard(drinkInfo) {
     ingred7.innerText = `${drinkInfo.strIngredient7}: ${drinkInfo.strMeasure7}`
     if (drinkInfo.strIngredient7 === null) {
         li7.remove()
+    } else if (drinkInfo.strMeasure7 === null) {
+        ingred7.innerText = `${drinkInfo.strIngredient7}`
+        li7.appendChild(ingred7)
     } else {
         li7.appendChild(ingred7)
     }
@@ -195,6 +213,9 @@ function renderRecipeCard(drinkInfo) {
     ingred8.innerText = `${drinkInfo.strIngredient8}: ${drinkInfo.strMeasure8}`
     if (drinkInfo.strIngredient8 === null) {
         li8.remove()
+    } else if (drinkInfo.strMeasure8 === null) {
+        ingred8.innerText = `${drinkInfo.strIngredient8}`
+        li8.appendChild(ingred8)
     } else {
         li8.appendChild(ingred8)
     }
@@ -207,6 +228,9 @@ function renderRecipeCard(drinkInfo) {
     ingred9.innerText = `${drinkInfo.strIngredient9}: ${drinkInfo.strMeasure9}`
     if (drinkInfo.strIngredient9 === null) {
         li9.remove()
+    } else if (drinkInfo.strMeasure9 === null) {
+        ingred9.innerText = `${drinkInfo.strIngredient9}`
+        li9.appendChild(ingred9)
     } else {
         li9.appendChild(ingred9)
     }
@@ -219,6 +243,9 @@ function renderRecipeCard(drinkInfo) {
     ingred10.innerText = `${drinkInfo.strIngredient10}: ${drinkInfo.strMeasure10}`
     if (drinkInfo.strIngredient10 === null) {
         li10.remove()
+    } else if (drinkInfo.strMeasure10 === null) {
+        ingred10.innerText = `${drinkInfo.strIngredient10}`
+        li10.appendChild(ingred10)
     } else {
         li10.appendChild(ingred10)
     }
@@ -231,6 +258,9 @@ function renderRecipeCard(drinkInfo) {
     ingred11.innerText = `${drinkInfo.strIngredient11}: ${drinkInfo.strMeasure11}`
     if (drinkInfo.strIngredient11 === null) {
         li11.remove()
+    } else if (drinkInfo.strMeasure11 === null) {
+        ingred11.innerText = `${drinkInfo.strIngredient11}`
+        li11.appendChild(ingred11)
     } else {
         li11.appendChild(ingred11)
     }
@@ -243,6 +273,9 @@ function renderRecipeCard(drinkInfo) {
     ingred12.innerText = `${drinkInfo.strIngredient12}: ${drinkInfo.strMeasure12}`
     if (drinkInfo.strIngredient12 === null) {
         li12.remove()
+    } else if (drinkInfo.strMeasure12 === null) {
+        ingred12.innerText = `${drinkInfo.strIngredient12}`
+        li12.appendChild(ingred12)
     } else {
         li12.appendChild(ingred12)
     }
@@ -255,6 +288,9 @@ function renderRecipeCard(drinkInfo) {
     ingred13.innerText = `${drinkInfo.strIngredient13}: ${drinkInfo.strMeasure13}`
     if (drinkInfo.strIngredient13 === null) {
         li13.remove()
+    } else if (drinkInfo.strMeasure13 === null) {
+        ingred13.innerText = `${drinkInfo.strIngredient13}`
+        li13.appendChild(ingred13)
     } else {
         li13.appendChild(ingred13)
     }
@@ -267,6 +303,9 @@ function renderRecipeCard(drinkInfo) {
     ingred14.innerText = `${drinkInfo.strIngredient14}: ${drinkInfo.strMeasure14}`
     if (drinkInfo.strIngredient14 === null) {
         li14.remove()
+    } else if (drinkInfo.strMeasure14 === null) {
+        ingred14.innerText = `${drinkInfo.strIngredient14}`
+        li14.appendChild(ingred14)
     } else {
         li14.appendChild(ingred14)
     }
@@ -279,8 +318,11 @@ function renderRecipeCard(drinkInfo) {
     ingred15.innerText = `${drinkInfo.strIngredient15}: ${drinkInfo.strMeasure15}`
     if (drinkInfo.strIngredient15 === null) {
         li15.remove()
+    } else if (drinkInfo.strMeasure15 === null) {
+        ingred15.innerText = `${drinkInfo.strIngredient15}`
+        li15.appendChild(ingred15)
     } else {
-        li5.appendChild(ingred5)
+        li15.appendChild(ingred15)
     }
 
     const preparation = document.createElement('div')
@@ -345,6 +387,9 @@ function renderOneCard(drinkInfo) {
     ingred1.innerText = `${drinkInfo.strIngredient1}: ${drinkInfo.strMeasure1}`
     if (drinkInfo.strIngredient1 === null) {
         li1.remove()
+    } else if (drinkInfo.strMeasure1 === null) {
+        ingred1.innerText = `${drinkInfo.strIngredient1}`
+        li1.appendChild(ingred1)
     } else {
         li1.appendChild(ingred1)
     }
@@ -357,10 +402,13 @@ function renderOneCard(drinkInfo) {
     ingred2.innerText = `${drinkInfo.strIngredient2}: ${drinkInfo.strMeasure2}`
     if (drinkInfo.strIngredient2 === null) {
         li2.remove()
+    } else if (drinkInfo.strMeasure2 === null) {
+        ingred2.innerText = `${drinkInfo.strIngredient2}`
+        li2.appendChild(ingred2)
     } else {
         li2.appendChild(ingred2)
     }
-
+    
     const li3 = document.createElement('li')
     ingredients.appendChild(li3)
     const ingred3 = document.createElement('div')
@@ -369,10 +417,13 @@ function renderOneCard(drinkInfo) {
     ingred3.innerText = `${drinkInfo.strIngredient3}: ${drinkInfo.strMeasure3}`
     if (drinkInfo.strIngredient3 === null) {
         li3.remove()
+    } else if (drinkInfo.strMeasure3 === null) {
+        ingred3.innerText = `${drinkInfo.strIngredient3}`
+        li3.appendChild(ingred3)
     } else {
         li3.appendChild(ingred3)
     }
-    
+
     const li4 = document.createElement('li')
     ingredients.appendChild(li4)
     const ingred4 = document.createElement('div')
@@ -381,6 +432,9 @@ function renderOneCard(drinkInfo) {
     ingred4.innerText = `${drinkInfo.strIngredient4}: ${drinkInfo.strMeasure4}`
     if (drinkInfo.strIngredient4 === null) {
         li4.remove()
+    } else if (drinkInfo.strMeasure4 === null) {
+        ingred4.innerText = `${drinkInfo.strIngredient4}`
+        li4.appendChild(ingred4)
     } else {
         li4.appendChild(ingred4)
     }
@@ -393,6 +447,9 @@ function renderOneCard(drinkInfo) {
     ingred5.innerText = `${drinkInfo.strIngredient5}: ${drinkInfo.strMeasure5}`
     if (drinkInfo.strIngredient5 === null) {
         li5.remove()
+    } else if (drinkInfo.strMeasure5 === null) {
+        ingred5.innerText = `${drinkInfo.strIngredient5}`
+        li5.appendChild(ingred5)
     } else {
         li5.appendChild(ingred5)
     }
@@ -405,6 +462,9 @@ function renderOneCard(drinkInfo) {
     ingred6.innerText = `${drinkInfo.strIngredient6}: ${drinkInfo.strMeasure6}`
     if (drinkInfo.strIngredient6 === null) {
         li6.remove()
+    } else if (drinkInfo.strMeasure6 === null) {
+        ingred6.innerText = `${drinkInfo.strIngredient6}`
+        li6.appendChild(ingred6)
     } else {
         li6.appendChild(ingred6)
     }
@@ -417,6 +477,9 @@ function renderOneCard(drinkInfo) {
     ingred7.innerText = `${drinkInfo.strIngredient7}: ${drinkInfo.strMeasure7}`
     if (drinkInfo.strIngredient7 === null) {
         li7.remove()
+    } else if (drinkInfo.strMeasure7 === null) {
+        ingred7.innerText = `${drinkInfo.strIngredient7}`
+        li7.appendChild(ingred7)
     } else {
         li7.appendChild(ingred7)
     }
@@ -429,6 +492,9 @@ function renderOneCard(drinkInfo) {
     ingred8.innerText = `${drinkInfo.strIngredient8}: ${drinkInfo.strMeasure8}`
     if (drinkInfo.strIngredient8 === null) {
         li8.remove()
+    } else if (drinkInfo.strMeasure8 === null) {
+        ingred8.innerText = `${drinkInfo.strIngredient8}`
+        li8.appendChild(ingred8)
     } else {
         li8.appendChild(ingred8)
     }
@@ -441,6 +507,9 @@ function renderOneCard(drinkInfo) {
     ingred9.innerText = `${drinkInfo.strIngredient9}: ${drinkInfo.strMeasure9}`
     if (drinkInfo.strIngredient9 === null) {
         li9.remove()
+    } else if (drinkInfo.strMeasure9 === null) {
+        ingred9.innerText = `${drinkInfo.strIngredient9}`
+        li9.appendChild(ingred9)
     } else {
         li9.appendChild(ingred9)
     }
@@ -453,6 +522,9 @@ function renderOneCard(drinkInfo) {
     ingred10.innerText = `${drinkInfo.strIngredient10}: ${drinkInfo.strMeasure10}`
     if (drinkInfo.strIngredient10 === null) {
         li10.remove()
+    } else if (drinkInfo.strMeasure10 === null) {
+        ingred10.innerText = `${drinkInfo.strIngredient10}`
+        li10.appendChild(ingred10)
     } else {
         li10.appendChild(ingred10)
     }
@@ -465,6 +537,9 @@ function renderOneCard(drinkInfo) {
     ingred11.innerText = `${drinkInfo.strIngredient11}: ${drinkInfo.strMeasure11}`
     if (drinkInfo.strIngredient11 === null) {
         li11.remove()
+    } else if (drinkInfo.strMeasure11 === null) {
+        ingred11.innerText = `${drinkInfo.strIngredient11}`
+        li11.appendChild(ingred11)
     } else {
         li11.appendChild(ingred11)
     }
@@ -477,6 +552,9 @@ function renderOneCard(drinkInfo) {
     ingred12.innerText = `${drinkInfo.strIngredient12}: ${drinkInfo.strMeasure12}`
     if (drinkInfo.strIngredient12 === null) {
         li12.remove()
+    } else if (drinkInfo.strMeasure12 === null) {
+        ingred12.innerText = `${drinkInfo.strIngredient12}`
+        li12.appendChild(ingred12)
     } else {
         li12.appendChild(ingred12)
     }
@@ -489,6 +567,9 @@ function renderOneCard(drinkInfo) {
     ingred13.innerText = `${drinkInfo.strIngredient13}: ${drinkInfo.strMeasure13}`
     if (drinkInfo.strIngredient13 === null) {
         li13.remove()
+    } else if (drinkInfo.strMeasure13 === null) {
+        ingred13.innerText = `${drinkInfo.strIngredient13}`
+        li13.appendChild(ingred13)
     } else {
         li13.appendChild(ingred13)
     }
@@ -501,6 +582,9 @@ function renderOneCard(drinkInfo) {
     ingred14.innerText = `${drinkInfo.strIngredient14}: ${drinkInfo.strMeasure14}`
     if (drinkInfo.strIngredient14 === null) {
         li14.remove()
+    } else if (drinkInfo.strMeasure14 === null) {
+        ingred14.innerText = `${drinkInfo.strIngredient14}`
+        li14.appendChild(ingred14)
     } else {
         li14.appendChild(ingred14)
     }
@@ -513,9 +597,13 @@ function renderOneCard(drinkInfo) {
     ingred15.innerText = `${drinkInfo.strIngredient15}: ${drinkInfo.strMeasure15}`
     if (drinkInfo.strIngredient15 === null) {
         li15.remove()
+    } else if (drinkInfo.strMeasure15 === null) {
+        ingred15.innerText = `${drinkInfo.strIngredient15}`
+        li15.appendChild(ingred15)
     } else {
-        li5.appendChild(ingred5)
+        li15.appendChild(ingred15)
     }
+
 
     const preparation = document.createElement('div')
     preparation.setAttribute('class', 'preparation')
