@@ -144,6 +144,9 @@ function renderRecipeCard(drinkInfo) {
     ingred4.innerText = `${drinkInfo.strIngredient4}: ${drinkInfo.strMeasure4}`
     if (drinkInfo.strIngredient4 === null) {
         li4.remove()
+    } else if (drinkInfo.strMeasure4 === null) {
+        ingred4.innerText = `${drinkInfo.strIngredient4}`
+        li4.appendChild(ingred4)
     } else {
         li4.appendChild(ingred4)
     }
