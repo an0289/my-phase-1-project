@@ -7,12 +7,6 @@ const submitForm = document.getElementById('drink_form')
 const search = document.getElementById('search')
 submitForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    //document.querySelector('.newContainer').remove()
-// if (search.value.length <= 1) {
-//     getDrinksByFirstLetter(search.value)
-// } else {
-//     getDrinksByName(search.value)
-// }
     removeChildren(collection)
     getDrinksByName(search.value)
     submitForm.reset()
@@ -25,25 +19,16 @@ function removeChildren(parent) {
     }
 }
 
-// function updateDrinkList(drinks) {
-//     removeChildren(collection)
-//     drinks.forEach((drinkName) => renderRecipeCard(drinkName))
-// }
-
-
-    const select = document.getElementById('letter-dropdown')
-    select.addEventListener('change', (e) => {
-        if (e.target.value === 'random') {
+const select = document.getElementById('letter-dropdown')
+select.addEventListener('change', (e) => {
+    if (e.target.value === 'random') {
             getRandomDrinkRecipe()
-        } else {
-            removeChildren(collection)
-            getDrinksByFirstLetter(e.target.value)
+    } else {
+        removeChildren(collection)
+        getDrinksByFirstLetter(e.target.value)
             
-        }
-    })
-
-
-let drinksArray = []
+    }
+})
 
 // Fetch function to find drinks by their name
 function getDrinksByName(drinkName) {
@@ -54,7 +39,6 @@ function getDrinksByName(drinkName) {
         drinksArray.forEach(drinkName => {
             renderRecipeCard(drinkName)
         })
-        // updateRecipePage()
         console.log(drinksArray)
         })
 }
@@ -79,34 +63,7 @@ function getRandomDrinkRecipe(drinkName) {
     })
 }
 
-// //Trying to create a change event listener to clear the webpage each subsequent search
-// function removeChildren(parent) {
-//     while (parent.firstChild) {
-//         parent.removeChild(parent.firstChild)
-//     }
-// }
-
-// function updateDrinkList(drinks) {
-//     removeChildren(collection)
-//     drinks.forEach((drinkName) => renderRecipeCard(drinkName))
-// }
-
-// function updateRecipePage() {
-//     submitForm.addEventListener('change', () => {
-//         if(search.value <=1) {
-//             return drinksArray.forEach((drinkName) => renderRecipeCard(drinkName))
-//         } else {
-//             updateDrinkList(drinksArray.filter(drinkName => {
-//                 return drinkName.match(search.value)
-//             }))
-//         }
-//     }) 
-// }
-
-
-
-
-//Function to dynamical render the card 
+//Function to dynamically render the card 
 function renderRecipeCard(drinkInfo) {
    
     const container = document.createElement('div')
