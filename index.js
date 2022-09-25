@@ -22,7 +22,8 @@ function removeChildren(parent) {
 const select = document.getElementById('letter-dropdown')
 select.addEventListener('change', (e) => {
     if (e.target.value === 'random') {
-            getRandomDrinkRecipe()
+        removeChildren(collection)    
+        getRandomDrinkRecipe()
     } else {
         removeChildren(collection)
         getDrinksByFirstLetter(e.target.value)
