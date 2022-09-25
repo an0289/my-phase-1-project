@@ -1,4 +1,5 @@
 const collection = document.getElementById('recipe-card-collection')
+document.addEventListener('DOMContentLoaded', getRandomDrinkRecipe)
 let drinksArray = []
 // Fetch function to find drinks by their name
 function getDrinksByName(drinkName) {
@@ -46,8 +47,10 @@ function getRandomDrinkRecipe(drinkName) {
 //Event Listener Submit 
 const submitForm = document.getElementById('drink_form')
 const search = document.getElementById('search')
+
 submitForm.addEventListener('submit', (e) => {
     e.preventDefault()
+    document.removeEventListener('DOMContentLoaded', getRandomDrinkRecipe)
 if (search.value.length <= 1) {
     getDrinksByFirstLetter(search.value)
 } else {
@@ -355,4 +358,3 @@ function renderRecipeName(drinkInfo) {
     toggle.appendChild(title)
     title.innerText = drinkInfo.strDrink
 }
-getRandomDrinkRecipe()
