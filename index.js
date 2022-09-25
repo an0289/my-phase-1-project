@@ -38,7 +38,10 @@ function getDrinksByName(drinkName) {
     .then(data => {
         drinksArray = data.drinks
         drinksArray.forEach(drinkName => {
-            renderRecipeCard(drinkName)
+           if (drinksArray.length <= 1) {
+            renderOneCard(drinkName)
+           } else {
+            renderRecipeCard(drinkName) }
         })
         console.log(drinksArray)
         })
@@ -59,7 +62,7 @@ function getRandomDrinkRecipe(drinkName) {
     .then(resp => resp.json())
     .then(data => {
         data.drinks.forEach(drinkName => {
-            renderRandomCard(drinkName)
+            renderOneCard(drinkName)
         })
     })
 }
@@ -296,7 +299,7 @@ function renderRecipeCard(drinkInfo) {
       
 }
 //Render Random Card Function Since Styling has to be different 
-function renderRandomCard(drinkInfo) {
+function renderOneCard(drinkInfo) {
     const newContainer = document.createElement('div')
     newContainer.setAttribute('class', 'newContainer')
     collection.appendChild(newContainer)
