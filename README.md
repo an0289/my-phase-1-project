@@ -19,6 +19,7 @@ Lastly, we need to create an additional <div> tag that contains the CSS design e
 
 ## API Source 
 The API source that will be used for this project is TheCocktailDB (https://www.thecocktaildb.com/api.php). In particular we are using:
+
     Search cocktail by name: 
         1. https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
         (in this example they are searching with the drink name "margarita")
