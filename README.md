@@ -16,3 +16,16 @@ A new <div> tag will need to be created that the HTML elements used to create th
 Lastly, we need to create an additional <div> tag that contains the CSS design elements of the original card display that can be used for when we know that only a single recipe card will be rendered. 
 
 ## API Source 
+The API source that will be used for this project is TheCocktailDB (https://www.thecocktaildb.com/api.php). In particular we are using:
+    Search cocktail by name: 
+        1. https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+        (in this example they are searching with the drink name "margarita")
+
+    List all coctails by first letter:
+        2. https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a
+        (in this example they are finding a list of all cocktails that begin with the letter 'a')
+
+    Lookup a random cocktail:
+        3. https://www.thecocktaildb.com/api/json/v1/1/random.php
+        (this generates a random recipe, so we do not need to pass in an agrument)
+
