@@ -34,6 +34,7 @@ The API source that will be used for this project is TheCocktailDB (https://www.
 
 ## Event Listeners 
 The event listeners that are used for this website are:
+
     1. A click event to reveal the 'inside' of the recipe card
     2. A submit event to create a search function to find cocktail drinks by their name 
     3. A DOMContentLoaded event to have a random recipe appear each time the webpage loads
