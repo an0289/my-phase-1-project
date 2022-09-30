@@ -5,20 +5,21 @@
 ## Usage
 
 - Users are able to use the search bar to search for cocktail recipes
-
-      `document.addEventListener('submit', )`
-
-- Users should be able to click on the recipe card and have it open up to reveal the ingredients and preparation instructions.
-
-      `document.addEventListener('click, )`
-
+```javascript
+document.addEventListener('submit', )
+```
+- Users should be able to click on the recipe card and have it open up to reveal the ingredients and preparation instructions
+```javascript
+document.addEventListener('click', )
+```
 - Whenever the page loads, a random recipe is rendered
-
-      `document.addEventListener('DOMContentLoaded, )`
-
-- Users are able to use the dropdown menu to select a letter to have all cocktail recipes starting with that letter rendered to the page.
-
-      `document.addEventListener('change', )`
+```javascript
+document.addEventListener('DOMContentLoaded', )
+```
+- Users are able to use the dropdown menu to select a letter to have all cocktail recipes starting with that letter rendered to the page
+```javascript
+document.addEventListener('change', )
+```
 
 ## Contributing
 ### CSS Source 
