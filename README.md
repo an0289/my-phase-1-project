@@ -1,6 +1,4 @@
 # My Phase 1 Project: A Searchable Cocktail Recipe Website  
-
-![webpage screen shot](https://user-images.githubusercontent.com/61669622/193164968-205f3018-b397-46f1-bd5e-e1ca92cce506.png)
 ![](https://github.com/an0289/my-phase-1-project/blob/main/website%20gif.gif)
 
 Usage
