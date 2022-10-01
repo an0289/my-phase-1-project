@@ -1,5 +1,4 @@
 # My Phase 1 Project: A Searchable Cocktail Recipe Website  
-
 ![](https://github.com/an0289/my-phase-1-project/blob/main/website%20gif.gif)
 
 ## Usage
