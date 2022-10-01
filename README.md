@@ -4,7 +4,7 @@
 
 ## Usage
 
-- Users are able to use the search bar to search for cocktail recipes:
+- Users are able to use the search bar to search for cocktail recipes
 ```javascript
 document.addEventListener('submit', )
 ```
